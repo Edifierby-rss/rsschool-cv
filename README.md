@@ -1,1 +1,1 @@
-# rsschool-cv
+https://Edifierby.github.io/rsschool-cv/cv
