@@ -1,1 +1,1 @@
-https://Edifierby.github.io/rsschool-cv/cv
+https://Edifierby.github.io/rsschool-cv/
