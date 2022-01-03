@@ -66,14 +66,12 @@
    color: #f52112;
    transition: color 0.5s;
  }
- 
  .link:hover {
    color: #0df330;
  }
  .box {
    background-color: #567895;
  }
- 
  header {
    background-color: rgb(40, 241, 13);
    color: white;
