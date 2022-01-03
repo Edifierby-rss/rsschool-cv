@@ -1,6 +1,6 @@
 @font-face {
    font-family: Licorice;
-    src: url("./assets/fonts/Licorice.ttf");
+    src: url("./assets/Licorice.ttf");
   }
   * {
    box-sizing: border-box;
@@ -69,13 +69,6 @@
  
  .link:hover {
    color: #0df330;
- }
- .rss {
-   width: 121px;
-   height: 45px;
-   background-image: url("./assets/avatar.jpg");
-   background-size: contain;
-   background-repeat: no-repeat;
  }
  .box {
    background-color: #567895;
