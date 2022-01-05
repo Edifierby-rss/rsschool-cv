@@ -1,121 +1,197 @@
-@font-face {
-   font-family: Licorice;
-    src: url("./assets/Licorice.ttf");
-  }
-  * {
-   box-sizing: border-box;
- }
- body {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
- }
- .container {
-   max-width: 1440px;
-   margin: 0 auto;
- }
- .nav-list {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
- }
- html {
-   scroll-behavior: smooth; 
- }
- .nav-list {
-   list-style: none;
- }
- .nav-link {
-   padding: 0 20px;
-   line-height: 50px;
- }
- .nav-link {
-   transition: .3s;
- }
- .section-item a {
-   color: #829985;
-   text-decoration: none;  
-   transition: color 0.5s;
- }
- .section-item a:hover {
-   color: #f31010;
- }
- .main-container {
-   display: flex;
-   flex-wrap: wrap;
- }
- .section {
-   width: 50%;
- }
- @media (max-width: 768px) {
+ /* */
+ * {
+  box-sizing: border-box;
+}
+/* Благодаря свойству box-sizing: border-box; границы и внутренние отступы будут учитываться в значениях, которые вы 
+указываете в ширине и высоте элемента. Это упрощает работу с размерами, позволяет указывать их более логично*/
+html {
+  scroll-behavior: smooth; 
+}
+/* Свойство для плавной прокрутки страницы*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1a1a1b;
+}
+/* стилизации шрифта страницы.
+Обратите внимание, что свойство justify-content определяет выравнивание элементов по главной оси. По умолчанию 
+у flexbox главная ось горизонтальная и свойство justify-content выравнивает элементы по горизонтали. Но указав 
+свойство flex-direction: column;, мы тем самым переопределили направление главной оси. Поэтому в данном случае 
+justify-content определяет выравнивание по вертикали.
+justify-content: space-between - указывает, что все элементы размещаются на максимальном расстоянии друг от 
+друга, крайние прижаты к границам родителя. (Цель достигнута, footer прижат к низу страницы.)
+*/
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 50px;
+}
+/* Как любой блочный элемент, контейнер стремится занять всю ширину окна браузера. Так и происходит до тех пор, пока 
+ширина окна не превышает 1440px, если окно браузера больше, свойство max-width ограничивает ширину контейнера.*/
+
+/* Для HEADER:*/
+header {
+  background-color: rgb(207, 205, 211);
+  color: rgb(65, 62, 62);
+}
+/* background-color: - задает цвет элемента header*/
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+/*
+display: flex - Чтобы разместить все элементы навигации nav расположить в строку, элементу .nav-list;
+justify-content: flex-end  - свойство, которое позволит элементы сдвинуть вправо;
+align-items: center - выровнять по центру по высоте;
+list-style: non  - Убирает стандартные маркеры-точки возле каждого слова
+*/
+.section-profile-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;  
+  text-transform: uppercase;
+}
+/* Текст в HEADER <div class="section-profile-title"> Разместится по центру блока.
+*/
+.main-title {
+  position: relative;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #3b3939;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  line-height: 50px;
+  word-spacing: 3px;
+}
+/* Задаем параметр для HEADER YAUHENI. Текст будет более растянут.
+*/
+.section-subtitle {
+  margin-top: 20px;
+  color: #f10e0e;
+  line-height: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+/* Задаем параметря для HEADER Junior Front-End Developer. Текст будет более растянут.
+*/
+.nav-link {
+  position: relative;
+  padding: 0 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  color: rgb(109, 105, 103);
+}
+/*    padding: 0 12px;
+  line-height: 50px; - Добавляем отступы между элементами списка
+  */
+
+/* Для main*/
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* display: flex контейнеры секции размещаются по горизонтали
+flex-wrap: wrap, секции, которые не помещаются по ширине контейнера переносятся на новую строку.*/
+.section {
+  width: 50%;
+}
+/* width: 50% свойство, которое указывает, что каждая секция занимает ровно половину ширины контейнера*/
+.section-item a {
+  color: #998292;
+  text-decoration: none;  
+  transition: color 0.5s;
+}
+.section-item a:hover {
+  color: #f31010;
+}
+/* Ссылка меняет цвет при наведении на нее*/
+@media (max-width: 768px) {
   .section {
     width: 100%;
   }
 }
- body {
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 1.5;
-   color: #191a18;
- }
- .section-title {
-   font-size: 20px;
-   font-weight: 400;
-   text-transform: uppercase;
-   letter-spacing: 5px;
-   color: #18ceee;
- }
- .link {
-   text-decoration: none;
-   color: #f52112;
-   transition: color 0.5s;
- }
- .link:hover {
-   color: #0df330;
- }
- .box {
-   background-color: #567895;
- }
- header {
-   background-color: rgb(40, 241, 13);
-   color: white;
- }
- span {
-   background-color: rgba(255,255,255,.5);
- }
- .footer {
-	padding: 20px 0;
-	background-color: rgb(40, 241, 13);
-	align-items: center;
+/* что при уменьшении ширины экрана до 768px, секция будет занимать всю ширину 100%.*/
+.section-profile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 50px 30px 35px;
+  border-bottom: 100px solid #ccc5cb;
 }
-.footer__wrapper {
+ /* После В ветке main, после section-profile рисуется разделительная полосу, размеры и цвет 
+ которой мы сейчас задали.*/
+ .section-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #18ceee;
+}
+/* стилизация заголовков*/
+.section-avatar {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(206, 9, 9, 0.6);
+  filter: grayscale(0.2) brightness(1.05);
+  transition: .3s;
+}
+/* Задаем параметря для нашей авы.*/
+span {
+  background-color: rgba(221, 21, 21, 0.5);
+}
+/* Задаем цвет некоторого текста span в наших контейнерах*/
+
+/* ДЛЯ FOOTER */
+.footer {
+	padding: 20px 0;
+	background-color: rgb(207, 205, 211);
+}
+/* Задаем параметря для FOOTER*/
+.footer__1 {
 	display: flex;
 	justify-content: space-between;
 }
-.footer__logo {
-	width: 100px;
-	height: 50px;
+/* Задаем параметря для FOOTER*/
+.footer__logotyp {
+	width: 200px;
+	height: 150px;
 }
-.footer__link {
+/* Задаем размеры для логотипа RSS*/
+.footer__git {
 	background-image: url(assets/github.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 50px;
-height: 50px;
+	width: 100px;
+	height: 100px;
 	object-fit: cover;
 	border: none;
 	padding-bottom: 0;
 }
-.footer__link-2{
+/* Задаем параметря для логотипа GITHUB*/
+.footer__rsschool{
   padding-bottom: 0;
   bottom: none;
   border-bottom: none;
 }
-.rss {
-  width: 400px;
-  height: 250px;
-  background-image: url("assets/avatar.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+.footer__year2022 {
+	font-size: 70px;
 }
-
+/* Задаем размер текста*/
