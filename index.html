@@ -4,14 +4,25 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>YAUHENI MAXWELL</title>
+   <!-- Название страницы-->
    <link rel="icon" href="./assets/favicon.ico">
+   <!-- Иконка страницы в формате iso. Можно использовать сайт для конвертирования 
+    https://image.online-convert.com/ru/convert-to-ico-->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <!-- Подключаем стиль текста из интернета -->
    <link rel="stylesheet" href="style.css">
+   <!-- Подключаем файл стилей css -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <!-- -->
    <header class="header">
+<!-- В блоке header размещается навигация по странице-->
       <div class="container header-container">
+<!--Контейнер - элемент с классом container, который ограничивает ширину контента и центрирует его на странице 
+        по горизонтали.-->
          <nav class="nav">
+<!--Для вёрстки навигации используется тег nav. -->
             <ul class="nav-list">          
               <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
               <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
@@ -21,22 +32,21 @@
               <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
               <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
               <li class="nav-item"><a href="#english" class="nav-link">English</a></li>
+            <!-- Каждой ссылке навигации укажите адрес, который начинается с #, а дальше идёт название раздела, 
+              на который она ведёт. Это якорные ссылки, при кликам по которым страница прокручивается до нужного раздела. Для этого разделам страницы необходимо указать id такие же, как и адреса ссылок в пунктах навигации.-->
             </ul>
           </nav>
-          <div class="toggle">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
       </div>
    </header>
    <main class="main">
       <div class="container main-container">
          <section class="section section-profile" id="profile">
-            <img class="rss" src="./assets/avatar.jpg" alt="avatar">
+  <!-- Секция - элемент <section>, который объединяет контент в соответствии с его тематикой. У секции, как правило, 
+            должен быть заголовок - элемент h1 - h6-->
+            <img src="./assets/avatar.jpg" alt="" class="section-avatar">
             <div class="section-profile-title">
-              <h1 class="section-title main-title">YAUHENI</h1>
-              <h2 class="section-subtitle">Junior Front-End Developer</h2>
+              <h1 class="main-title">YAUHENI</h1>
+              <h3 class="section-subtitle">Junior Front-End Developer</h3>
             </div>        
           </section>
           <section class="section" id="contacts">
@@ -78,7 +88,17 @@
           <section class="section" id="code">
             <h2 class="section-title">Code</h2>
     <pre class="pre"><code>
-      console.log(0.39 * 0.22);
+      .center {
+        margin: auto;
+        background: lime;
+        width: 66%;
+      }
+      
+      .outside {
+        margin: 3rem 0 0 -3rem;
+        background: cyan;
+        width: 66%;
+      }
     </code></pre>
           </section>
           <section class="section" id="projects">
@@ -108,13 +128,11 @@
          </div>
    </main>
    <footer class="footer">
-		<div class="container">
-			<div class="footer__wrapper">
-				<a href="https://rs.school/" class="footer__link-2" target="blank"> <img class="footer__logo"
+			<div class="footer__1">
+				<a href="https://rs.school/" class="footer__rsschool" target="blank"> <img class="footer__logotyp"
 						src="https://rs.school/images/rs_school_js.svg" alt="rs-school"></a>
-				<a class="footer__link" target="blank" href="https://github.com/Edifierby-rss"></a>
-        <h4 class="footer__year text">© 2022</h4>
-			</div>
+				<a class="footer__git" target="blank" href="https://github.com/Edifierby-rss"></a>
+				<h3 class="footer__year2022">©2022</h3>
 		</div>
 	</footer>
 </body>
